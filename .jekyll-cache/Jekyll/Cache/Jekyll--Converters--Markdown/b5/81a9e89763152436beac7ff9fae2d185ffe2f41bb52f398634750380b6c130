@@ -1,0 +1,49 @@
+I"�	<h2 id="格式化输出函数">格式化输出函数</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>print(&lt;#T##items: Any...##Any#&gt;)  
+print(letValue)
+//传入两个以上参数时，输出结果会有空格隔开
+print(varValue1, varValue2)    
+</code></pre></div></div>
+<h2 id="字符串拼接后输出">字符串拼接后输出</h2>
+<p>参数依次为一个或多个元素、分隔符、结尾符（结尾符需要手动加个\n，否则不会自动换行）</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>print(&lt;#T##items: Any...##Any#&gt;, separator: &lt;#T##String#&gt;, terminator: &lt;#T##String#&gt;)
+
+let letValue = "常量字符串"
+var varValue1 = "变量字符串1"
+var varValue2 = "变量字符串2"
+print(letValue, varValue1, varValue2, separator: "AAA", terminator: “BBB\n”)
+//输出结果：常量字符串AAA变量字符串1AAA变量字符串2BBB常量字符串
+</code></pre></div></div>
+<h2 id="输出到变量">输出到变量</h2>
+<p>与直接拼接后输出不一样的是，末尾加一个\n，会导致空行。</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>print(&lt;#T##items: Any...##Any#&gt;, to: &amp;&lt;#T##Target#&gt;)
+
+var name = "名字"
+var subName = "不知道这是什么"
+var targetVarValue:String = "hehe"
+print(name, subName, to: &amp;targetVarValue)
+print(targetVarValue)
+print("==========分割线==========")
+//输出结果：
+hehe名字 不知道这是什么
+
+==========分割线==========
+</code></pre></div></div>
+<h2 id="字符串插值">字符串插值</h2>
+<p>将常量名或变量名当做占位符加入到长字符串中，Swift会用当前常来给你或变量的值替换这些占位符。</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>print("字符串插值&gt;\(userName)&lt;在这里\(name)。”)
+//输出结果：字符串插值&gt;用户名&lt;在这里名字。
+
+//字符串插值
+let testStr = "这里插入了一个值\(testVar)在这里"
+</code></pre></div></div>
+<h2 id="多行字符串">多行字符串</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>//多行字符串用3个双引号括起来
+let dhStr = """
+这里可以
+随便
+换行
+"""
+print("这里打印下多行字符串：\(dhStr)")
+</code></pre></div></div>
+:ET

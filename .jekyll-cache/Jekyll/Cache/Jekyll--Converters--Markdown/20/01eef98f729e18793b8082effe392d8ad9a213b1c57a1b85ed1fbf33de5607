@@ -1,0 +1,28 @@
+I"<p>Shadowsocks使用PAC自动模式时，访问一个网站到底走不走代理，并不完全像我们期望的那样。这时候就需要手动进行干预。</p>
+
+<h3 id="编辑pac规则">编辑PAC规则</h3>
+<p>点击菜单栏shadowsocks图标，在下拉窗口里选择“代理设置-&gt;编辑PAC用户自定规则…”。</p>
+
+<p><img src="https://image.oldboard.cn/blog/shadowsocks-pac.jpg" width="400" /></p>
+
+<p><img src="https://image.oldboard.cn/blog/shadowsocks-pacedit.png" width="400" /></p>
+
+<h3 id="常用规则说明">常用规则说明</h3>
+<h4 id="-标记">* 标记</h4>
+<p>通配符。任何满足条件的都会走代理。如 *.example.com/*，表示：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+</code></pre></div></div>
+
+<h4 id="-标记-1">|| 标记</h4>
+<p>只匹配域名的结尾。如 ||example.com，表示：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>http://example.com
+https://example.com
+ftp://example.com 
+</code></pre></div></div>
+<p>等，都会走代理。</p>
+<h4 id="-标记-2">@@ 标记</h4>
+<p>例外规则，满足</p>
+
+<h3 id="注意">注意</h3>
+<p>修改PAC规则后，需要将shadowsocks关闭后重新打开，才会生效。</p>
+:ET
