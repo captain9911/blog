@@ -42,7 +42,7 @@ https://image.example.com/abcd
 等，都不会走代理。
 
 #### || 标记  
-只匹配域名的结尾。
+只匹配域名的结尾。  
 如：
 ```
 ||example.com
@@ -56,7 +56,7 @@ ftp://example.com
 等，都会走代理。
 
 #### | 标记
-匹配地址的开头和结尾。
+匹配地址的开头和结尾。  
 如：
 ```
 |https://example.com
@@ -68,7 +68,7 @@ example.com|
 表示以 example.com 结尾的地址会走代理。
 
 #### ! 标记
-注释。
+注释。  
 如：
 ```
 ! 这是一行注释
