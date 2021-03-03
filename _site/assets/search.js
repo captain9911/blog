@@ -1,0 +1,1 @@
+window.TEXT_SEARCH_DATA={'posts':[{'title':"Swift - 符号",'url':"/2020/12/21/swift-%E7%AC%A6%E5%8F%B7.html"},{'title':"Swift - 打印",'url':"/2021/02/06/swift-%E6%89%93%E5%8D%B0.html"},{'title':"Shadowsocks PAC模式自定义规则",'url':"/2021/03/02/shadowsocks%E8%87%AA%E5%AE%9A%E4%B9%89%E8%A7%84%E5%88%99.html"}]};
