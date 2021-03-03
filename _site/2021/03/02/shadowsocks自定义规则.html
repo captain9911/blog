@@ -279,11 +279,7 @@
               <div class="col-main cell cell--auto"><!-- start custom main top snippet -->
 
 <!-- end custom main top snippet -->
-<article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1>Shadowsocks PAC模式自定义规则</h1></header><span class="split-space">&nbsp;</span>
-          <a class="edit-on-github"
-            title="Edit on Github"
-            href="https://github.com/user_name/repo_name/tree/master/_posts/2021-03-02-shadowsocks自定义规则.md">
-            <i class="far fa-edit"></i></a></div><meta itemprop="headline" content="Shadowsocks PAC模式自定义规则"><div class="article__info clearfix"><ul class="left-col menu"><li>
+<article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1>Shadowsocks PAC模式自定义规则</h1></header></div><meta itemprop="headline" content="Shadowsocks PAC模式自定义规则"><div class="article__info clearfix"><ul class="left-col menu"><li>
               <a class="button button--secondary button--pill button--sm"
                 href="/archive.html?tag=Tools">Tools</a>
             </li><li>
@@ -329,7 +325,7 @@ https://image.example.com/abcd
 <p>等，都不会走代理。</p>
 
 <h4 id="-标记-2">|| 标记</h4>
-<p>只匹配域名的结尾。
+<p>只匹配域名的结尾。<br />
 如：</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>||example.com
 </code></pre></div></div>
@@ -341,7 +337,7 @@ ftp://example.com
 <p>等，都会走代理。</p>
 
 <h4 id="-标记-3">| 标记</h4>
-<p>匹配地址的开头和结尾。
+<p>匹配地址的开头和结尾。<br />
 如：</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>|https://example.com
 </code></pre></div></div>
@@ -351,7 +347,7 @@ ftp://example.com
 <p>表示以 example.com 结尾的地址会走代理。</p>
 
 <h4 id="-标记-4">! 标记</h4>
-<p>注释。
+<p>注释。<br />
 如：</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>! 这是一行注释
 ! ||example.com
@@ -359,7 +355,7 @@ ftp://example.com
 <p>! 后面的内容表示注释，以!开头的规则也会无效。</p>
 
 <h3 id="示例">示例</h3>
-<p><img src="https://image.oldboard.cn/blog/shadowsocks-paceditend.png" width="400" /></p>
+<p><img src="https://image.oldboard.cn/blog/shadowpaceditend.png" width="400" /></p>
 
 <h3 id="注意">注意</h3>
 <p>每行只能写一条规则。修改PAC规则后，需要将shadowsocks关闭后重新打开，才会生效。</p>

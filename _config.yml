@@ -211,7 +211,7 @@ defaults:
       license: false # 文章下显示许可证
       aside:
         toc: true
-      show_edit_on_github: true
+      show_edit_on_github: false # 文章标题旁显示编辑按钮，点击后跳转至github相应位置
       show_subscribe: false # 文章下显示订阅
       pageview: true
 
