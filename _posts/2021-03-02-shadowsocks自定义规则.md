@@ -77,7 +77,7 @@ example.com|
 ! 后面的内容表示注释，以!开头的规则也会无效。
 
 ### 示例
-<img src="https://image.oldboard.cn/blog/shadowsocks-paceditend.png" width="400">
+<img src="https://image.oldboard.cn/blog/shadowpaceditend.png" width="400">
 
 ### 注意
 每行只能写一条规则。修改PAC规则后，需要将shadowsocks关闭后重新打开，才会生效。
