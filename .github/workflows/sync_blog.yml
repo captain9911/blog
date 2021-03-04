@@ -1,13 +1,18 @@
 name: Sync Github To Gitee
-
+# 关键字，触发的事件，可以为push，pull，或者指定时间等
 on: [ push ]
-
+# 任务组
 jobs:
-    build:
+    # 单个任务的名称，可以自己定义
+    sync:
+        # 运行所需要的虚拟环境，这里是最新的ubuntu系统
         runs-on: ubuntu-latest
+        # 任务执行的步骤
         steps:
+        # 步骤的名称，可以自己定义
         - name: Sync to Gitee
-            uses: captain9911/blog@master
+            # 这个步骤使用的action
+            uses: wearerequired/git-mirror-action@master
             env:
                 # 注意在 Settings->Secrets 配置 GITEE_RSA_PRIVATE_KEY
                 SSH_PRIVATE_KEY: ${{ secrets.GITEE_RSA_PRIVATE_KEY }}
@@ -16,12 +21,6 @@ jobs:
                 source-repo: "https://github.com/captain9911/blog.git"
                 # 注意替换为你的 Gitee 目标仓库地址
                 destination-repo: "https://gitee.com/captain9911/captain9911.git"
-        - name: Build Gitee Pages
-            uses: captain9911/captain9911@master
-            with:
-                # 注意替换为你的 Gitee 用户名
-                gitee-username: captain9911
-                # 注意在 Settings->Secrets 配置 GITEE_PASSWORD
-                gitee-password: ${{ secrets.GITEE_PASSWORD }}
-                # 注意替换为你的 Gitee 仓库
-                gitee-repo: captain9911/captain9911
+        # 一个任务可以有多个步骤
+        # - name: Build Gitee Pages
+        # 。。。
