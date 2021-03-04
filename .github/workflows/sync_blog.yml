@@ -12,7 +12,7 @@ jobs:
         # 步骤的名称，可以自己定义
         - name: Sync to Gitee
             # 这个步骤使用的action
-            uses: wearerequired/git-mirror-action@master
+            uses: wearerequired/git-mirror-action@v1
             env:
                 # 注意在 Settings->Secrets 配置 GITEE_RSA_PRIVATE_KEY
                 SSH_PRIVATE_KEY: ${{ secrets.GITEE_RSA_PRIVATE_KEY }}
