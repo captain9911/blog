@@ -1,22 +1,25 @@
-name: Sync Github To Gitee
+name: Mirror To Gitee
 on: [push]
 jobs:
-    sync-blog:
-        runs-on: ubuntu-latest
-        steps:
-        - name: Sync to Gitee
-          uses: wearerequired/git-mirror-action@master
-          env:
-            SSH_PRIVATE_KEY: ${{ secrets.GITEE_RSA_PRIVATE_KEY }}
-          with:
-            source-repo: "git@github.com:captain9911/blog.git"
-            destination-repo: "git@gitee.com:captain9911/captain9911.git"
-        - name: Build Gitee Pages
-          uses: yanglbme/gitee-pages-action@master
-          with:
-            # 注意替换为你的 Gitee 用户名
-            gitee-username: captain9911
-            # 注意在 Settings->Secrets 配置 GITEE_PASSWORD
-            gitee-password: ${{ secrets.GITEE_PASSWORD }}
-            # 注意替换为你的 Gitee 仓库，用户名/仓库名
-            gitee-repo: captain9911/captain9911
+  sync-blog:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Sync to Gitee
+      uses: wearerequired/git-mirror-action@master
+      env:
+        # 注意在 Settings->Secrets 配置 GITEE_RSA_PRIVATE_KEY
+        SSH_PRIVATE_KEY: ${{ secrets.GITEE_RSA_PRIVATE_KEY }}
+      with:
+        # 注意替换为你的 GitHub 源仓库地址
+        source-repo: "git@github.com:captain9911/blog.git"
+        # 注意替换为你的 Gitee 目标仓库地址
+        destination-repo: "git@gitee.com:captain9911/captain9911.git"
+    - name: Build Gitee Pages
+      uses: yanglbme/gitee-pages-action@master
+      with:
+        # 注意替换为你的 Gitee 用户名
+        gitee-username: captain9911
+        # 注意在 Settings->Secrets 配置 GITEE_PASSWORD
+        gitee-password: ${{ secrets.GITEE_PASSWORD }}
+        # 注意替换为你的 Gitee 仓库，用户名/仓库名
+        gitee-repo: captain9911/captain9911
