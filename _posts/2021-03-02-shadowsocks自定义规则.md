@@ -1,6 +1,6 @@
 ---
 title: Shadowsocks PAC模式自定义规则
-tags: Tools Mac
+tags: Tools Mac Shadowsocks
 ---
 
 Shadowsocks使用PAC自动模式时，访问一个网站到底走不走代理，并不完全像我们期望的那样。这时候就需要手动进行干预。

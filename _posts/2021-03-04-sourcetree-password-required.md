@@ -1,6 +1,6 @@
 ---
 title: Sourcetree提交代码时提示Password Required
-tags: Tools Mac
+tags: Tools Mac Sourcetree
 ---
 #### 问题
 每次提交代码都会弹窗，要求输入密码。

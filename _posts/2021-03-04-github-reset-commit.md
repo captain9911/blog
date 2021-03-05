@@ -1,6 +1,6 @@
 ---
 title: 删除已提交到GitHub上的某次commit
-tags: Github Mac
+tags: Github
 ---
 
 #### 示例
