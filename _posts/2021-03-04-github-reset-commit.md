@@ -4,7 +4,7 @@ tags: GitHub
 ---
 
 #### 示例
-<img src="https://image.oldboard.cn/blog/WX20210304-105659.png">
+<img src="https://image.oldboard.tech/blog/WX20210304-105659.png">
 
 #### 查询需要删除的记录
 
@@ -12,11 +12,11 @@ tags: GitHub
 git log
 ```
 
-<img src="https://image.oldboard.cn/blog/WX20210304-111628.png" width="600">
+<img src="https://image.oldboard.tech/blog/WX20210304-111628.png" width="600">
 
 #### 将HEAD指向前一条记录
 
-<img src="https://image.oldboard.cn/blog/WX20210304-111921.png" width="600">
+<img src="https://image.oldboard.tech/blog/WX20210304-111921.png" width="600">
 
 ```
 git reset --hard 3bbd54798fc9760f038e9f91a8c40fb3bf792b51
@@ -29,4 +29,4 @@ git push origin HEAD --force
 ```
 
 #### 删除成功后
-<img src="https://image.oldboard.cn/blog/WX20210304-112316.png">
+<img src="https://image.oldboard.tech/blog/WX20210304-112316.png">

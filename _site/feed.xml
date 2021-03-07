@@ -4,9 +4,9 @@
 &lt;h3 id=&quot;编辑pac规则&quot;&gt;编辑PAC规则&lt;/h3&gt;
 &lt;p&gt;点击菜单栏shadowsocks图标，在下拉窗口里选择“代理设置-&amp;gt;编辑PAC用户自定规则…”。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://image.oldboard.cn/blog/shadowsocks-pac.jpg&quot; width=&quot;400&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://image.oldboard.tech/blog/shadowsocks-pac.jpg&quot; width=&quot;400&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://image.oldboard.cn/blog/shadowsocks-pacedit.png&quot; width=&quot;400&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://image.oldboard.tech/blog/shadowsocks-pacedit.png&quot; width=&quot;400&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;常用规则说明&quot;&gt;常用规则说明&lt;/h3&gt;
 &lt;h4 id=&quot;-标记&quot;&gt;* 标记&lt;/h4&gt;
@@ -64,7 +64,7 @@ ftp://example.com
 &lt;p&gt;! 后面的内容表示注释，以!开头的规则也会无效。&lt;/p&gt;
 
 &lt;h3 id=&quot;示例&quot;&gt;示例&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;https://image.oldboard.cn/blog/shadowpaceditend.png&quot; width=&quot;400&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://image.oldboard.tech/blog/shadowpaceditend.png&quot; width=&quot;400&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;注意&quot;&gt;注意&lt;/h3&gt;
 &lt;p&gt;每行只能写一条规则。修改PAC规则后，需要将shadowsocks关闭后重新打开，才会生效。&lt;/p&gt;</content><author><name>Your Name</name></author><category term="Tools" /><category term="Mac" /><summary type="html">Shadowsocks使用PAC自动模式时，访问一个网站到底走不走代理，并不完全像我们期望的那样。这时候就需要手动进行干预。 编辑PAC规则 点击菜单栏shadowsocks图标，在下拉窗口里选择“代理设置-&amp;gt;编辑PAC用户自定规则…”。 常用规则说明 * 标记 通配符。*可以表示任何字符串，任何满足条件的都会走代理。 如： *.example.com/* 表示： https://www.example.com https://image.example.com https://image.example.com/abcd 等，都会走代理。 @@ 标记 例外规则，任何满足 @@后面规则的地址，都不会走代理。 如： @@*.example.com/\* 表示： https://www.example.com https://image.example.com https://image.example.com/abcd 等，都不会走代理。 || 标记 只匹配域名的结尾。 如： ||example.com 表示： http://example.com/abcd https://example.com ftp://example.com 等，都会走代理。 | 标记 匹配地址的开头和结尾。 如： |https://example.com 表示以 https://example.com 开头的地址会走代理。 example.com| 表示以 example.com 结尾的地址会走代理。 ! 标记 注释。 如： ! 这是一行注释 ! ||example.com ! 后面的内容表示注释，以!开头的规则也会无效。 示例 注意 每行只能写一条规则。修改PAC规则后，需要将shadowsocks关闭后重新打开，才会生效。</summary></entry><entry><title type="html">Swift - 打印</title><link href="/2021/02/06/swift-%E6%89%93%E5%8D%B0.html" rel="alternate" type="text/html" title="Swift - 打印" /><published>2021-02-06T00:00:00+08:00</published><updated>2021-02-06T00:00:00+08:00</updated><id>/2021/02/06/swift-%E6%89%93%E5%8D%B0</id><content type="html" xml:base="/2021/02/06/swift-%E6%89%93%E5%8D%B0.html">&lt;h2 id=&quot;格式化输出函数&quot;&gt;格式化输出函数&lt;/h2&gt;
