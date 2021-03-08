@@ -153,7 +153,7 @@ pageview:
   leancloud:
     app_id    : uAG3OhdcH8H4fxSqXLyBljA7-gzGzoHsz # LeanCloud App id
     app_key   : Mzf5m9skSwYVWVXhGiYMNyXs # LeanCloud App key
-    app_class : TeXtDemo # LeanCloud App class
+    app_class : ThomasBlog # LeanCloud App class
 
 
 ## => Search
