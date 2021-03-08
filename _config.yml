@@ -22,7 +22,7 @@ url     : # the base hostname & protocol for your site e.g. https://www.someone.
 baseurl :  # does not include hostname
 title   : "Captain9911" 
 description: > # this means to ignore newlines until "Language & timezone"
-  "Captain9911's blog."
+  Captain9911's blog. 
 
 
 ## => Language and Timezone
@@ -151,9 +151,9 @@ pageview:
 
   ## Leancloud
   leancloud:
-    app_id    : # LeanCloud App id
-    app_key   : # LeanCloud App key
-    app_class : # LeanCloud App class
+    app_id    : J4MkWPxybTzdiE8tHBlabUuV-gzGzoHsz # LeanCloud App id
+    app_key   : CvWYCp0JHBSjFXwaKgUWvhb9 # LeanCloud App key
+    app_class : blog # LeanCloud App class
 
 
 ## => Search
