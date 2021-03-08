@@ -1,0 +1,16 @@
+I"�<h4 id="生成秘钥">生成秘钥</h4>
+
+<p>这里的邮箱只用于生成 sshkey 的名称，并不用作任何约束。</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh-keygen -t rsa -C "xxxxx@xxxxx.com"
+</code></pre></div></div>
+
+<p>之后终端会要求三次输入，均可直接回车跳过。</p>
+
+<p>1.秘钥文件的保存地址，必须为绝对路径，默认为<code class="language-plaintext highlighter-rouge">/Users/xxx/.ssh/id_rsa</code>，其中<code class="language-plaintext highlighter-rouge">xxx</code>为当前系统登录的用户名。<br />
+2.密码，默认为空。<br />
+3.确认密码，默认为空。</p>
+
+<p>如果第一步没有指定秘钥文件地址，则在<code class="language-plaintext highlighter-rouge">/Users/xxx/.ssh</code>目录下会生成秘钥文件，私钥<code class="language-plaintext highlighter-rouge">id_rsa</code>及公钥<code class="language-plaintext highlighter-rouge">id_rsa.pub</code>。</p>
+
+:ET
