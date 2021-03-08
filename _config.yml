@@ -147,6 +147,10 @@ comments:
 ## => Pageview
 ##############################
 pageview:
+  # false: 不统计不显示阅读量
+  # leancloud: 统计并显示阅读量
+  # leancloud-hide: 统计但不显示阅读量
+  # custom: 自定义统计，显示阅读量
   provider: "leancloud-hide" # false (default), "leancloud", "custom", "leancloud-hide"
 
   ## Leancloud
