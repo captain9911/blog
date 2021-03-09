@@ -1,10 +1,10 @@
 <!DOCTYPE html><html lang="en">
   <head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>Swift - 打印 - Captain9911</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>生成SSH秘钥 - Captain9911</title>
 
-<meta name="description" content="格式化输出函数print(&lt;#T##items: Any...##Any#&gt;)  print(letValue)//传入两个以上参数时，输出结果会有空格隔开print(varValue1, varValue2)    字符串拼接后输出参数依次为一个或多个元素、分隔符、结尾符（结尾符需要手动加个\n，否...">
-<link rel="canonical" href="/2021/02/06/swift-%E6%89%93%E5%8D%B0.html"><link rel="alternate" type="application/rss+xml" title="Captain9911" href="/feed.xml"><!-- start favicons snippet, use https://realfavicongenerator.net/ --><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="manifest" href="/assets/site.webmanifest"><link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#fc4d50"><link rel="shortcut icon" href="/assets/favicon.ico">
+<meta name="description" content="生成秘钥这里的邮箱只用于生成 sshkey 的名称，并不用作任何约束。ssh-keygen -t rsa -C "xxxxx@xxxxx.com"之后终端会要求三次输入，均可直接回车跳过。1.秘钥文件的保存地址，必须为绝对路径，默认为/Users/xxx/.ssh/id_rsa，其中xxx为当前系统登录的用户名。...">
+<link rel="canonical" href="/2021/03/05/ssh-rsa.html"><link rel="alternate" type="application/rss+xml" title="Captain9911" href="/feed.xml"><!-- start favicons snippet, use https://realfavicongenerator.net/ --><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="manifest" href="/assets/site.webmanifest"><link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#fc4d50"><link rel="shortcut icon" href="/assets/favicon.ico">
 
 <meta name="msapplication-TileColor" content="#ffc40d"><meta name="msapplication-config" content="/assets/browserconfig.xml">
 
@@ -279,67 +279,34 @@
               <div class="col-main cell cell--auto"><!-- start custom main top snippet -->
 
 <!-- end custom main top snippet -->
-<article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1>Swift - 打印</h1></header></div><meta itemprop="headline" content="Swift - 打印"><div class="article__info clearfix"><ul class="left-col menu"><li>
+<article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1>生成SSH秘钥</h1></header></div><meta itemprop="headline" content="生成SSH秘钥"><div class="article__info clearfix"><ul class="left-col menu"><li>
               <a class="button button--secondary button--pill button--sm"
-                href="/archive.html?tag=Swift">Swift</a>
-            </li></ul><ul class="right-col menu"><li><i class="far fa-calendar-alt"></i> <span>Feb 06, 2021</span>
-            </li></ul></div><meta itemprop="author" content="Your Name"/><meta itemprop="datePublished" content="2021-02-06T00:00:00+08:00">
-    <meta itemprop="keywords" content="Swift"><div class="js-article-content"><div class="layout--article"><!-- start custom article top snippet -->
+                href="/archive.html?tag=Tools">Tools</a>
+            </li></ul><ul class="right-col menu"><li><i class="far fa-calendar-alt"></i> <span>Mar 05, 2021</span>
+            </li></ul></div><meta itemprop="author" content="Your Name"/><meta itemprop="datePublished" content="2021-03-05T00:00:00+08:00">
+    <meta itemprop="keywords" content="Tools"><div class="js-article-content"><div class="layout--article"><!-- start custom article top snippet -->
 
 <!-- end custom article top snippet -->
-<div class="article__content" itemprop="articleBody"><h2 id="格式化输出函数">格式化输出函数</h2>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>print(&lt;#T##items: Any...##Any#&gt;)  
-print(letValue)
-//传入两个以上参数时，输出结果会有空格隔开
-print(varValue1, varValue2)    
-</code></pre></div></div>
-<h2 id="字符串拼接后输出">字符串拼接后输出</h2>
-<p>参数依次为一个或多个元素、分隔符、结尾符（结尾符需要手动加个\n，否则不会自动换行）</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>print(&lt;#T##items: Any...##Any#&gt;, separator: &lt;#T##String#&gt;, terminator: &lt;#T##String#&gt;)
+<div class="article__content" itemprop="articleBody"><h4 id="生成秘钥">生成秘钥</h4>
 
-let letValue = "常量字符串"
-var varValue1 = "变量字符串1"
-var varValue2 = "变量字符串2"
-print(letValue, varValue1, varValue2, separator: "AAA", terminator: “BBB\n”)
-//输出结果：常量字符串AAA变量字符串1AAA变量字符串2BBB常量字符串
-</code></pre></div></div>
-<h2 id="输出到变量">输出到变量</h2>
-<p>与直接拼接后输出不一样的是，末尾加一个\n，会导致空行。</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>print(&lt;#T##items: Any...##Any#&gt;, to: &amp;&lt;#T##Target#&gt;)
+<p>这里的邮箱只用于生成 sshkey 的名称，并不用作任何约束。</p>
 
-var name = "名字"
-var subName = "不知道这是什么"
-var targetVarValue:String = "hehe"
-print(name, subName, to: &amp;targetVarValue)
-print(targetVarValue)
-print("==========分割线==========")
-//输出结果：
-hehe名字 不知道这是什么
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh-keygen -t rsa -C "xxxxx@xxxxx.com"
+</code></pre></div></div>
 
-==========分割线==========
-</code></pre></div></div>
-<h2 id="字符串插值">字符串插值</h2>
-<p>将常量名或变量名当做占位符加入到长字符串中，Swift会用当前常来给你或变量的值替换这些占位符。</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>print("字符串插值&gt;\(userName)&lt;在这里\(name)。”)
-//输出结果：字符串插值&gt;用户名&lt;在这里名字。
+<p>之后终端会要求三次输入，均可直接回车跳过。</p>
 
-//字符串插值
-let testStr = "这里插入了一个值\(testVar)在这里"
-</code></pre></div></div>
-<h2 id="多行字符串">多行字符串</h2>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>//多行字符串用3个双引号括起来
-let dhStr = """
-这里可以
-随便
-换行
-"""
-print("这里打印下多行字符串：\(dhStr)")
-</code></pre></div></div>
-</div><section class="article__sharing d-print-none"></section><div class="d-print-none"><footer class="article__footer"><meta itemprop="dateModified" content="2021-02-06T00:00:00+08:00"><!-- start custom article footer snippet -->
+<p>1.秘钥文件的保存地址，必须为绝对路径，默认为<code class="language-plaintext highlighter-rouge">/Users/xxx/.ssh/id_rsa</code>，其中<code class="language-plaintext highlighter-rouge">xxx</code>为当前系统登录的用户名。<br />
+2.密码，默认为空。<br />
+3.确认密码，默认为空。</p>
+
+<p>如果第一步没有指定秘钥文件地址，则在<code class="language-plaintext highlighter-rouge">/Users/xxx/.ssh</code>目录下会生成秘钥文件，私钥<code class="language-plaintext highlighter-rouge">id_rsa</code>及公钥<code class="language-plaintext highlighter-rouge">id_rsa.pub</code>。</p>
+
+</div><section class="article__sharing d-print-none"></section><div class="d-print-none"><footer class="article__footer"><meta itemprop="dateModified" content="2021-03-05T00:00:00+08:00"><!-- start custom article footer snippet -->
 
 <!-- end custom article footer snippet -->
 </footer>
-<div class="article__section-navigator clearfix"><div class="previous"><span>PREVIOUS</span><a href="/2020/12/21/swift-%E7%AC%A6%E5%8F%B7.html">Swift - 符号</a></div><div class="next"><span>NEXT</span><a href="/2021/03/02/shadowsocks%E8%87%AA%E5%AE%9A%E4%B9%89%E8%A7%84%E5%88%99.html">Shadowsocks PAC模式自定义规则</a></div></div></div>
+<div class="article__section-navigator clearfix"><div class="previous"><span>PREVIOUS</span><a href="/2021/03/05/sourcetree-ssl.html">Sourcetree 报错 SSL_ERROR_SYSCALL</a></div></div></div>
 
 </div>
 
