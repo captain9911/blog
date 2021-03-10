@@ -163,11 +163,11 @@ pageview:
 ## => Search
 ##############################
 search:
-  provider: "google" # "default" (default), false, "google", "custom"
+  provider: default # "default" (default), false, "google", "custom"
 
   ## Google Custom Search Engine
   google:
-    custom_search_engine_id: d7b7386d3aaba17e2 # Google Custom Search Engine ID
+    custom_search_engine_id: # Google Custom Search Engine ID
 
 
 ## => Analytics
