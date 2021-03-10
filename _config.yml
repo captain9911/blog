@@ -163,7 +163,7 @@ pageview:
 ## => Search
 ##############################
 search:
-  provider: "custom" # "default" (default), false, "google", "custom"
+  provider: "google" # "default" (default), false, "google", "custom"
 
   ## Google Custom Search Engine
   google:
