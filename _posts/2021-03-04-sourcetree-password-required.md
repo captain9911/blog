@@ -1,6 +1,6 @@
 ---
 title: Sourcetree提交代码时提示Password Required
-tags: Tools Mac Sourcetree
+tags: Tools Mac
 key: 2021-03-04-sourcetree-password-required
 ---
 #### 问题

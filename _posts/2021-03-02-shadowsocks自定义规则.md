@@ -1,6 +1,6 @@
 ---
 title: Shadowsocks PAC模式自定义规则
-tags: Tools Mac Shadowsocks
+tags: Tools Mac
 key: 2021-03-02-shadowsocks自定义规则
 ---
 
