@@ -1,7 +1,7 @@
 ---
 title: Swift - 打印
 tags: Swift iOS
-key: 2021-02-06-swift_print
+key: 2021-02-06-swift-print
 ---
 ## 格式化输出函数
 ```

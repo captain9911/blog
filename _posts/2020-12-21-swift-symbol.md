@@ -1,7 +1,7 @@
 ---
 title: Swift - 符号
 tags: Swift iOS
-key: 2020-12-21-swift_symbol
+key: 2020-12-21-swift-symbol
 ---
 
 #### 注释
