@@ -1,6 +1,6 @@
 ---
 title: 删除已提交到GitHub上的某次commit
-tags: GitHub
+tags: GitHub Git
 key: 2021-03-04-github-reset-commit
 ---
 

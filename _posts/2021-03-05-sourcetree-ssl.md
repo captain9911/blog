@@ -1,6 +1,6 @@
 ---
 title: Sourcetree 报错 SSL_ERROR_SYSCALL
-tags: Tools GitHub
+tags: Sourcetree
 key: 2021-03-05-sourcetree-ssl
 ---
 
