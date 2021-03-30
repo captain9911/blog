@@ -14,7 +14,7 @@ key: 2021-03-30-gitignore无效
 ```
 #删除本地缓存
 git rm -r --cached .
-#将改动提交到暂存区
+#将改动放到暂存区
 git add .
 #提交
 git commit -m "your commit"
