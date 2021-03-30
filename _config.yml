@@ -222,7 +222,7 @@ defaults:
 
 ## => Plugins
 ##############################
-# 加上这行，sitemap才能生成完整url
+# 加上这行，sitemap才能生成完整路径
 url: "https://www.oldboard.tech" # the base hostname & protocol for your site
 plugins:
   - jekyll-feed
