@@ -222,6 +222,8 @@ defaults:
 
 ## => Plugins
 ##############################
+# 加上这行，sitemap才能生成完整url
+url: "https://www.oldboard.tech"
 plugins:
   - jekyll-feed
   - jekyll-paginate
