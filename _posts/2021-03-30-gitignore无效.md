@@ -1,5 +1,5 @@
 ---
-title: .gitignore忽略文件无效
+title: .gitignore忽略文件无效的解决方法
 tags: Git
 key: 2021-03-30-gitignore无效
 ---
