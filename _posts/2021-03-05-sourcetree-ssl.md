@@ -1,5 +1,5 @@
 ---
-title: Sourcetree 报错 SSL_ERROR_SYSCALL
+title: Sourcetree报错 LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to github.com:443
 tags: Other
 key: 2021-03-05-sourcetree-ssl
 ---
