@@ -11,13 +11,11 @@ key: 2021-04-05-sourcetree报错unableToAccess
 
 ### 报错原因
 
-1. Shadowsocks没打开。
-2. 打开了git全局代理。
+设置了git全局代理，且Shadowsocks未打开。
 
 ### 解决方法
 
-1. 打开Shadowsocks。
-2. 关闭git全局代理。
+打开Shadowsocks，或关闭git全局代理。
 
 关闭git全局代理的方法见：<a href="https://www.oldboard.tech/2021/03/27/git%E4%BD%BF%E7%94%A8%E4%BB%A3%E7%90%86.html">Git使用代理</a>
 
