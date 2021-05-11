@@ -1,6 +1,6 @@
 ---
 title: Cornerstone报错Unable to parse URL...
-tags: Xcode
+tags: Other
 key: 2021-05-10-cornerstone报错unable
 ---
 > 关键词：Cornerstone, Unable to parese
@@ -21,7 +21,7 @@ The operation could not be completed.
 
 #### 原因分析
 
-当前使用的svn版本，与当前svn服务端的版本不相同。
+当前使用的svn版本，与当前svn服务端的版本不兼容。
 
 ### 解决方法
 
