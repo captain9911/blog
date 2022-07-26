@@ -1,7 +1,7 @@
 ---
 title: Xcode报错Could not load NIB in bundle
 tags: Xcode
-key: 2021-05-29-xcode加载xib报错
+key: 2021-05-29-xcode_xib_error
 ---
 > 关键词：xcode, bundle, xib, nib
 
