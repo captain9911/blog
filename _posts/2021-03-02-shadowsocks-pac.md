@@ -4,6 +4,8 @@ tags: Other
 key: 2021-03-02-shadowsocks-pac
 ---
 
+> 关键词：Shadowsocks, PAC自动模式, 编辑PAC用户自定规则, PAC规则
+
 Shadowsocks使用PAC自动模式时，访问一个网站到底走不走代理，并不完全像我们期望的那样。这时候就需要手动进行干预。
 
 ### 编辑PAC规则
