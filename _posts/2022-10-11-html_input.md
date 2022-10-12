@@ -82,3 +82,59 @@ submit按钮如果不设置value，则默认为“提交”。
 ```
 <input type="file">
 ```
+
+### HTML5新增的类型
+
+```
+<!-- 当输入的内容与指定类型不一致时，会弹出提示 -->
+
+<!-- 提交时会提示错误 -->
+邮箱：<input type="email">
+<br>
+
+<!-- 这个没有提示 -->
+电话：<input type="tel">
+<br>
+
+<!-- 点击提交时会提示错误 -->
+URL：<input type="url">
+<br>
+
+<!-- 只能输入数字，有小三角进行增减减少操作 -->
+数字：<input type="number">
+<br>
+
+<!-- 圆角输入框 -->
+搜索：<input type="search">
+<br>
+
+<!-- 显示一个滑块 -->
+范围：<input type="range">
+<br>
+
+<!-- x午xx:xx，可上下调整 -->
+上下午时分：<input type="time">
+<br>
+
+<!-- 可上下调整，可弹出日历 -->
+年月日：<input type="date">
+<br>
+
+<!-- 这个没有提示 -->
+时间：<input type="datetime">
+<br>
+
+<!-- xxxx年xx月，可上下调整，可弹出日历 -->
+年月：<input type="month">
+<br>
+
+<!-- xxxx年第xx周，可上下调整，可弹出日历 -->
+年周：<input type="week">
+<br>
+
+<!-- 弹出颜色选择器 -->
+颜色：<input type="color">
+<br>
+
+提交：<input type="submit">
+```
