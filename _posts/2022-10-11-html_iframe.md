@@ -17,12 +17,11 @@ key: 2022-10-11-html_iframe
 <iframe src="https://www.csdn.net/" width="200" height="100"></iframe>
 <p>这是一个去掉边框的内联框架</p>
 <iframe src="https://www.csdn.net/" width="300" height="200" frameborder="0"></iframe>
-<p>这个内联框架用来显示连接指向的内容</p>
+```
+
+### 用内联框架来显示链接指向的内容
+
+```
 <iframe src="http://www.baidu.com" name="ifr" width="200" height="100"></iframe>
 <p>点击<a href="http://www.w3cschool.cn" target="ifr">这个链接</a>，链接的内容会显示在内联框架中。</p>
 ```
-
-### 示例
-
-<iframe src="http://www.baidu.com" name="ifr" width="200" height="100"></iframe>
-<p>点击<a href="http://www.w3cschool.cn" target="ifr">这个链接</a>，链接的内容会显示在内联框架中。</p>
