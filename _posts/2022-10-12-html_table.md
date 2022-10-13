@@ -332,103 +332,135 @@ key: 2022-10-12-html_table
 	</tr>
 </table>
 
-### 页眉、页脚、主体
+### 划分了结构的表格（页眉、页脚、主体）
 
 ```
 <!-- 页眉、页脚、主体都可以有多行 -->
-<table border="1">
-	<!-- 页眉 -->
+<table width="300" height="200" border="1">
+	<!-- caption必须紧随table标签，并且每个表格只能定义一个 -->
+	<caption>这个是表格标题</caption>
+	<!-- thead与tbody、tfoot用来划分表格代码结构 -->
+	<!-- 头部 -->
 	<thead>
 		<tr>
-			<td>yemei00</td>
-			<td>yemei01</td>
-			<td>yemei02</td>
-		</tr>
-		<tr>
-			<td>yemei10</td>
-			<td>yemei11</td>
-			<td>yemei12</td>
+			<th>表头内容0</th>
+			<th>表头内容1</th>
+			<th>表头内容2</th>
 		</tr>
 	</thead>
-	<!-- 页脚 -->
-	<tfoot>
-		<tr>
-			<td>yejiao00</td>
-			<td>yejiao01</td>
-			<td>yejiao02</td>
-		</tr>
-		<tr>
-			<td>yejiao10</td>
-			<td>yejiao11</td>
-			<td>yejiao12</td>
-		</tr>
-	</tfoot>
 	<!-- 主体 -->
 	<tbody>
 		<tr>
-			<td>zhuti00</td>
-			<td>zhuti01</td>
-			<td>zhuti02</td>
+			<td>内容00</td>
+			<td>内容01</td>
+			<td>内容02</td>
 		</tr>
 		<tr>
-			<td>zhuti10</td>
-			<td>zhuti11</td>
-			<td>zhuti12</td>
+			<td>内容10</td>
+			<td>内容11</td>
+			<td>内容12</td>
 		</tr>
 	</tbody>
-	<tr>
-		<td>qwer</td>
-		<td>asdf</td>
-		<td>zxcv</td>
-	</tr>
+	<!-- 页脚 -->
+	<!-- 页脚存在兼容性问题，一般不使用 -->
+	<tfoot>
+		<tr>
+			<td>页脚0</td>
+			<td>页脚1</td>
+			<td>页脚2</td>
+		</tr>
+	</tfoot>
 </table>
 ```
 
 <!-- 页眉、页脚、主体都可以有多行 -->
-<table border="1">
-	<!-- 页眉 -->
+<table width="300" height="200" border="1">
+	<!-- caption必须紧随table标签，并且每个表格只能定义一个 -->
+	<caption>这个是表格标题</caption>
+	<!-- thead与tbody、tfoot用来划分表格代码结构 -->
+	<!-- 头部 -->
 	<thead>
 		<tr>
-			<td>yemei00</td>
-			<td>yemei01</td>
-			<td>yemei02</td>
-		</tr>
-		<tr>
-			<td>yemei10</td>
-			<td>yemei11</td>
-			<td>yemei12</td>
+			<th>表头内容0</th>
+			<th>表头内容1</th>
+			<th>表头内容2</th>
 		</tr>
 	</thead>
-	<!-- 页脚 -->
-	<tfoot>
-		<tr>
-			<td>yejiao00</td>
-			<td>yejiao01</td>
-			<td>yejiao02</td>
-		</tr>
-		<tr>
-			<td>yejiao10</td>
-			<td>yejiao11</td>
-			<td>yejiao12</td>
-		</tr>
-	</tfoot>
 	<!-- 主体 -->
 	<tbody>
 		<tr>
-			<td>zhuti00</td>
-			<td>zhuti01</td>
-			<td>zhuti02</td>
+			<td>内容00</td>
+			<td>内容01</td>
+			<td>内容02</td>
 		</tr>
 		<tr>
-			<td>zhuti10</td>
-			<td>zhuti11</td>
-			<td>zhuti12</td>
+			<td>内容10</td>
+			<td>内容11</td>
+			<td>内容12</td>
 		</tr>
 	</tbody>
+	<!-- 页脚 -->
+	<!-- 页脚存在兼容性问题，一般不使用 -->
+	<tfoot>
+		<tr>
+			<td>页脚0</td>
+			<td>页脚1</td>
+			<td>页脚2</td>
+		</tr>
+	</tfoot>
+</table>
+
+## 应用
+
+```
+<table border="0" width="500">
 	<tr>
-		<td>qwer</td>
-		<td>asdf</td>
-		<td>zxcv</td>
+		<!-- 横向跨度为2个单元格 -->
+		<td colspan="2" style="background-color: #FFA500;">
+			<h1>这是一个标题</h1>
+		</td>
+	</tr>
+	<tr>
+		<td style="background-color: red; width: 100px">
+			<h4>这是小标题0</h4>
+			<h4>这是小标题1</h4>
+			<h4>这是小标题2</h4>
+			<h4>这是小标题3</h4>
+		</td>
+		<td style="background-color: blue;">
+			<p>这里是一个段落</p>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2" style="background-color: yellow; text-align: center;">
+			这是一段文字
+		</td>
+	</tr>
+</table>
+```
+
+<table border="0" width="500">
+	<tr>
+		<!-- 横向跨度为2个单元格 -->
+		<td colspan="2" style="background-color: #FFA500;">
+			<h1>这是一个标题</h1>
+		</td>
+	</tr>
+	<tr>
+		<td style="background-color: red; width: 100px">
+			<h4>这是小标题0</h4>
+			<h4>这是小标题1</h4>
+			<h4>这是小标题2</h4>
+			<h4>这是小标题3</h4>
+		</td>
+		<td style="background-color: blue;">
+			<p>这里是一个段落</p>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2" style="background-color: yellow; text-align: center;">
+			这是一段文字
+		</td>
 	</tr>
 </table>
 
