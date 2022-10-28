@@ -1,5 +1,5 @@
 ---
-title: HTML_textarea_文本域
+title: HTML textarea 文本域
 tags: HTML
 key: 2022-10-12-html_textarea
 ---

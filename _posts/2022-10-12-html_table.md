@@ -1,5 +1,5 @@
 ---
-title: HTML_table_表格
+title: HTML table 表格
 tags: HTML
 key: 2022-10-12-html_table
 ---

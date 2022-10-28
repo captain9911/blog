@@ -1,5 +1,5 @@
 ---
-title: HTML_datalist_选项列表
+title: HTML datalist 选项列表
 tags: HTML
 key: 2022-10-12-html_datalist
 ---
