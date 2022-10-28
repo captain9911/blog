@@ -1,6 +1,6 @@
 ---
 title: 导出App Store上App的ipa包
-tags: Mac iOS Xcode
+tags: Mac iOS
 key: 2021-04-13-导出appstore的ipa
 ---
 > 关键词：Mac, iOS, ipa, Apple Configurator 2, 导出ipa
