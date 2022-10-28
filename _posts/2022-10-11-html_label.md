@@ -1,5 +1,5 @@
 ---
-title: HTML_labele_标注
+title: HTML labele 标注
 tags: HTML
 key: 2022-10-11-html_label
 ---

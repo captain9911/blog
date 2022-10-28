@@ -1,5 +1,5 @@
 ---
-title: HTML_input_表单输入
+title: HTML input 表单输入
 tags: HTML
 key: 2022-10-11-html_input
 ---
