@@ -9,9 +9,7 @@ key: 2022-12-30-chrome报错addListener
 
 打开任意的网页，控制台都会有这个报错。
 
-`
 	VM332 content.js:1 Uncaught TypeError: chrome.runtime.onMessage.addListener(...) is not a function
-`
 
 <img src="https://image.oldboard.tech/blog/WX20221230-164253.png"/>
 
