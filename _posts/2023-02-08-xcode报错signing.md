@@ -7,7 +7,7 @@ key: 2023-02-08-xcode报错signing
 
 ## 错误信息
 
-编译报错：
+组件化项目编译报错：
 
 	Signing for "xxxxxx" requires a development team. Select a development team in the Signing & Capabilities editor.
 
