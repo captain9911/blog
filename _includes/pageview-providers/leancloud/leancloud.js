@@ -66,6 +66,18 @@
           }, errorHandler);
         }
       }, errorHandler);
+      // ====下面这段是访问日志====
+      Vis.init({
+        serverURLs: 'https://avoscloud.com',
+        appId: 'ZknMgXjGsDDCSVM1X95MMkCF-gzGzoHsz',
+        appKey: 'vBJSAwByOUdJlvNKLg7y6K29'
+      });
+      var Vis = Vis.Object.extend('blog_visitor_blog');
+      var vis = new Vis();
+      vis.set('title', title);
+      vis.set('key', key);
+      return vis.save();
+      // =======================
     }
   }
   window.pageview = pageview;
