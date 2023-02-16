@@ -72,7 +72,7 @@
         appId: 'ZknMgXjGsDDCSVM1X95MMkCF-gzGzoHsz',
         appKey: 'vBJSAwByOUdJlvNKLg7y6K29'
       });
-      var Vis = Vis.Object.extend('blog_visitor_blog');
+      var Vis = Vis.Object.extend('blog_visitor_log');
       var vis = new Vis();
       vis.set('title', title);
       vis.set('key', key);
