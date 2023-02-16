@@ -79,6 +79,7 @@
       vis.set('title', 'aaa');
       vis.set('key', 'bbb');
       vis.save();
+      console.log('aaa');
       // =======================
       
     }
