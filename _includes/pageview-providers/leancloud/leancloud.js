@@ -66,18 +66,21 @@
           }, errorHandler);
         }
       }, errorHandler);
+
       // ====下面这段是访问日志====
-      Vis.init({
+      var Vis = AV.init({
         serverURLs: 'https://avoscloud.com',
         appId: 'ZknMgXjGsDDCSVM1X95MMkCF-gzGzoHsz',
         appKey: 'vBJSAwByOUdJlvNKLg7y6K29'
       });
-      var Vis = Vis.Object.extend('blog_visitor_log');
-      var vis = new Vis();
-      vis.set('title', title);
-      vis.set('key', key);
-      return vis.save();
+      
+      var Visitor = AV.Object.extend('blog_visitor_log');
+      var vis = new Visitor();
+      vis.set('title', 'aaa');
+      vis.set('key', 'bbb');
+      vis.save();
       // =======================
+      
     }
   }
   window.pageview = pageview;
