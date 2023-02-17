@@ -32,7 +32,8 @@
   <script>
     const handler = function (data) {
       let status = data['status']
-      if (status == 0) {
+      let message = data['message']
+      // if (status == 0) {
         let ip = data['result']['ip']
         let nation = data['result']['ad_info']['nation']
         let province = data['result']['ad_info']['province']
@@ -54,9 +55,13 @@
         vis.set('lat', lat);
         vis.set('lng', lng);
         vis.set('ip', ip);
-        vis.set('addr', addr);
+        if (status == 0) {
+          vis.set('addr', addr);
+        } else {
+          vis.set('addr', message)
+        }
         vis.save();
-      }
+      // }
     }
     // 通过jsonp获取位置信息
     const url = "https://apis.map.qq.com/ws/location/v1/ip?output=jsonp&callback=handler&key=2HTBZ-NAKE3-6ID35-YAPBX-GZTSK-G7FGD"
