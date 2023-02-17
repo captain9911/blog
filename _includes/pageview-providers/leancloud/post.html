@@ -33,7 +33,7 @@
   const handler = function (data) {
     let status = data['status']
     if (status == 0) {
-      let ip = data['result']['ip']
+      let ip_addr = data['result']['ip']
       let nation = data['result']['ad_info']['nation']
       let province = data['result']['ad_info']['province']
       let city = data['result']['ad_info']['city']
@@ -49,9 +49,9 @@
       var vis = new Visitor();
       vis.set('title', title);
       vis.set('key', key);
-      vis.set('lat', lat);
-      vis.set('lng', lng);
-      vis.set('ip', ip);
+      // vis.set('lat', lat);
+      // vis.set('lng', lng);
+      vis.set('ip_addr', ip_addr);
       vis.set('addr', addr);
       vis.save();
     }
