@@ -66,15 +66,6 @@
           }, errorHandler);
         }
       }, errorHandler);
-
-      // ====下面这段是访问日志====
-      // var Visitor = AV.Object.extend('blog_visitor_log');
-      // var vis = new Visitor();
-      // vis.set('title', title);
-      // vis.set('key', key);
-      // vis.save();
-      // =======================
-      
     }
   }
   window.pageview = pageview;
