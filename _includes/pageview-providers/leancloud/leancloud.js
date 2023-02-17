@@ -52,24 +52,7 @@
       }, errorHandler);
     }
 
-    function increase(key, title, callback) {
-      searchKey(key).then(function(result) {
-        if (result) {
-          increment(result).then(function(result) {
-            callback && callback(result.attributes.views);
-          });
-        } else {
-          insert(key, title).then(function(result) {
-            increment(result).then(function(result) {
-              callback && callback(result.attributes.views);
-            });
-          }, errorHandler);
-        }
-      }, errorHandler);
-
-      // ====下面这段是记录访问日志====
-
-      const handler = function (data) {
+    const handler = function (data) {
       let status = data['status']
       if (status == 0) {
         let ip = data['result']['ip']
@@ -92,13 +75,32 @@
         vis.save();
       }
     }
-    const url = "https://apis.map.qq.com/ws/location/v1/ip?output=jsonp&callback=handler&key=2HTBZ-NAKE3-6ID35-YAPBX-GZTSK-G7FGD"
-    var script = document.createElement('script');
-    script.setAttribute('src', url);
-    script.async = true
-    document.getElementsByTagName('head')[0].appendChild(script);
-    
-    // =======================
+
+    function increase(key, title, callback) {
+      searchKey(key).then(function(result) {
+        if (result) {
+          increment(result).then(function(result) {
+            callback && callback(result.attributes.views);
+          });
+        } else {
+          insert(key, title).then(function(result) {
+            increment(result).then(function(result) {
+              callback && callback(result.attributes.views);
+            });
+          }, errorHandler);
+        }
+      }, errorHandler);
+
+      // ====下面这段是记录访问日志====
+
+      
+      const url = "https://apis.map.qq.com/ws/location/v1/ip?output=jsonp&callback=handler&key=2HTBZ-NAKE3-6ID35-YAPBX-GZTSK-G7FGD"
+      var script = document.createElement('script');
+      script.setAttribute('src', url);
+      script.async = true
+      document.getElementsByTagName('head')[0].appendChild(script);
+
+      // =======================
   
     }
   }
