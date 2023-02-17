@@ -33,6 +33,10 @@
     const handler = function (data) {
       let status = data['status']
       let message = data['message']
+
+      var key = '{{ page.key }}';
+      var title = {{ page.title | jsonify }};
+
       if (status == 0) {
         let ip = data['result']['ip']
         let nation = data['result']['ad_info']['nation']
@@ -42,10 +46,6 @@
         let lat = data['result']['location']['lat']
         let lng = data['result']['location']['lng']
         let addr = nation + ' ' + province + ' ' + city + ' ' + district
-
-        var key = '{{ page.key }}';
-        var title = {{ page.title | jsonify
-        }};
 
         // 将浏览信息写入leancloud
         var Visitor = AV.Object.extend('blog_visitor_log');
