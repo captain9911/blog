@@ -6,6 +6,30 @@
     }
   }
 
+  const handler = function (data) {
+    let status = data['status']
+    if (status == 0) {
+      let ip = data['result']['ip']
+      let nation = data['result']['ad_info']['nation']
+      let province = data['result']['ad_info']['province']
+      let city = data['result']['ad_info']['city']
+      let district = data['result']['ad_info']['district']
+      let lat = data['result']['location']['lat']
+      let lng = data['result']['location']['lng']
+      let addr = nation + ' ' + province + ' ' + city + ' ' + district
+
+      var Visitor = AV.Object.extend('blog_visitor_log');
+      var vis = new Visitor();
+      vis.set('title', title);
+      vis.set('key', key);
+      vis.set('lat', lat);
+      vis.set('lng', lng);
+      vis.set('ip', ip);
+      vis.set('addr', addr);
+      vis.save();
+    }
+  }
+
   function pageview(_AV, options) {
     var AV = _AV;
     var appId, appKey, appClass;
@@ -50,30 +74,6 @@
           callback && callback(result.attributes.views);
         }
       }, errorHandler);
-    }
-
-    const handler = function (data) {
-      let status = data['status']
-      if (status == 0) {
-        let ip = data['result']['ip']
-        let nation = data['result']['ad_info']['nation']
-        let province = data['result']['ad_info']['province']
-        let city = data['result']['ad_info']['city']
-        let district = data['result']['ad_info']['district']
-        let lat = data['result']['location']['lat']
-        let lng = data['result']['location']['lng']
-        let addr = nation + ' ' + province + ' ' + city + ' ' + district
-
-        var Visitor = AV.Object.extend('blog_visitor_log');
-        var vis = new Visitor();
-        vis.set('title', title);
-        vis.set('key', key);
-        vis.set('lat', lat);
-        vis.set('lng', lng);
-        vis.set('ip', ip);
-        vis.set('addr', addr);
-        vis.save();
-      }
     }
 
     function increase(key, title, callback) {
