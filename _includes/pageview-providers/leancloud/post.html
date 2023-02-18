@@ -61,15 +61,15 @@
         vis.save();
       }
     }
-
+    
+    var objectId = ''
     function saveVisitorInfo() {
-      var Visitor = AV.Object.extend('blog_visitor_log');
-      var vis = new Visitor();
       var key = '{{ page.key }}';
       var title = {{ page.title | jsonify }};
+      var Visitor = AV.Object.extend('blog_visitor_log');
+      var vis = new Visitor();
       vis.set('title', title);
       vis.set('key', key);
-      var objectId = ''
       vis.save().then((todo) => {
         objectId  = todo.id;
         // 通过jsonp获取位置信息
