@@ -91,13 +91,26 @@
       vis.save().then((todo) => {
         lcObjectId  = todo.id;
         // 通过jsonp获取位置信息
-        getInfo('https://apis.map.qq.com/ws/location/v1/ip?output=jsonp&callback=txHandler&key=2HTBZ-NAKE3-6ID35-YAPBX-GZTSK-G7FGD');
+        // getInfo('https://apis.map.qq.com/ws/location/v1/ip?output=jsonp&callback=txHandler&key=2HTBZ-NAKE3-6ID35-YAPBX-GZTSK-G7FGD');
         // getInfo('https://api.ip.sb/geoip?callback=ipsbHandler');
+        getAddrInfo();
       }, (error) => {
         console.log('保存失败')
       });
     }
 
+    function getAddrInfo() {
+      var url = 'https://api.ip.sb/geoip?callback=ipsbHandler'
+      var script = document.createElement('script');
+      script.setAttribute('src', url);
+      script.async = true
+      document.getElementsByTagName('head')[0].appendChild(script);
+      var url2 = 'https://apis.map.qq.com/ws/location/v1/ip?output=jsonp&callback=txHandler&key=2HTBZ-NAKE3-6ID35-YAPBX-GZTSK-G7FGD'
+      var script2 = document.createElement('script');
+      script2.setAttribute('src', url2);
+      script2.async = true
+      document.getElementsByTagName('head')[0].appendChild(script2);
+    }
     function getInfo(apiUrl) {
       var url = apiUrl
       var script = document.createElement('script');
