@@ -65,6 +65,8 @@
     function saveVisitorInfo() {
       var Visitor = AV.Object.extend('blog_visitor_log');
       var vis = new Visitor();
+      var key = '{{ page.key }}';
+      var title = {{ page.title | jsonify }};
       vis.set('title', title);
       vis.set('key', key);
       var objectId = ''
