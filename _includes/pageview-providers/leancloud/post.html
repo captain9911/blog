@@ -31,38 +31,54 @@
 
   <!-- 这段代码用来记录访客浏览记录 -->
   <script>
-    const handler = function (data) {
+    const txHandler = function (data) {
       let status = data['status']
       let message = data['message']
 
-      var key = '{{ page.key }}';
-      var title = {{ page.title | jsonify }};
-
       if (status == 0) {
         let ip = data['result']['ip']
+        let lat = data['result']['location']['lat']
+        let lng = data['result']['location']['lng']
         let nation = data['result']['ad_info']['nation']
         let province = data['result']['ad_info']['province']
         let city = data['result']['ad_info']['city']
         let district = data['result']['ad_info']['district']
-        let lat = data['result']['location']['lat']
-        let lng = data['result']['location']['lng']
+        // 国家 省 市 区
         let addr = nation + ' ' + province + ' ' + city + ' ' + district
         // 将浏览信息写入leancloud
-        let vis = AV.Object.createWithoutData('blog_visitor_log', objectId);
-        vis.set('lat', lat);
-        vis.set('lng', lng);
-        vis.set('ip', ip);
-        vis.set('addr', addr);
+        let vis = AV.Object.createWithoutData('blog_visitor_log', lcObjectId);
+        vis.set('txIp', ip);
+        vis.set('txLat', lat);
+        vis.set('txLng', lng);
+        vis.set('txAddr', addr);
         vis.save();
       } else {
         // 将浏览信息写入leancloud
-        let vis = AV.Object.createWithoutData('blog_visitor_log', objectId);
-        vis.set('addr', message)
+        let vis = AV.Object.createWithoutData('blog_visitor_log', lcObjectId);
+        vis.set('txAddr', message)
         vis.save();
       }
     }
-    
-    var objectId = ''
+
+    const ipsbHandler = function (data) {
+      let ip = data['ip']
+      let lat = data['latitude']
+      let lng = data['longitude']
+      let nation = data['country']
+      let province = data['region']
+      let city = data['city']
+      // 国家 省 市
+      let addr = nation + ' ' + province + ' ' + city
+      // 将浏览信息写入leancloud
+      let vis = AV.Object.createWithoutData('blog_visitor_log', lcObjectId);
+      vis.set('ipsbIp', ip);
+      vis.set('ipsbLat', lat);
+      vis.set('ipsbLng', lng);
+      vis.set('ipsbAddr', addr);
+      vis.save();
+    }
+
+    var lcObjectId = ''
     function saveVisitorInfo() {
       var key = '{{ page.key }}';
       var title = {{ page.title | jsonify }};
@@ -71,16 +87,21 @@
       vis.set('title', title);
       vis.set('key', key);
       vis.save().then((todo) => {
-        objectId  = todo.id;
+        lcObjectId  = todo.id;
         // 通过jsonp获取位置信息
-        const url = "https://apis.map.qq.com/ws/location/v1/ip?output=jsonp&callback=handler&key=2HTBZ-NAKE3-6ID35-YAPBX-GZTSK-G7FGD"
-        var script = document.createElement('script');
-        script.setAttribute('src', url);
-        script.async = true
-        document.getElementsByTagName('head')[0].appendChild(script);
+        getInfo('https://apis.map.qq.com/ws/location/v1/ip?output=jsonp&callback=txHandler&key=2HTBZ-NAKE3-6ID35-YAPBX-GZTSK-G7FGD');
+        getInfo('https://api.ip.sb/geoip?callback=ipsbHandler');
       }, (error) => {
         console.log('保存失败')
       });
+    }
+
+    function getInfo(url) {
+      const url = url
+      var script = document.createElement('script');
+      script.setAttribute('src', url);
+      script.async = true
+      document.getElementsByTagName('head')[0].appendChild(script);
     }
 
   </script>
