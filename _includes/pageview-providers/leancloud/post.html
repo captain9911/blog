@@ -24,6 +24,7 @@
       var title = {{ page.title | jsonify }};
       pageview.increase(key, title, function(view) {
         $("[data-page-key='{{ page.key }}']").text(view);
+        saveVisitorInfo();
       });
     });
   </script>
@@ -61,22 +62,24 @@
       }
     }
 
-    var Visitor = AV.Object.extend('blog_visitor_log');
-    var vis = new Visitor();
-    vis.set('title', title);
-    vis.set('key', key);
-    var objectId = ''
-    vis.save().then((todo) => {
-      objectId  = todo.id;
-      // 通过jsonp获取位置信息
-      const url = "https://apis.map.qq.com/ws/location/v1/ip?output=jsonp&callback=handler&key=2HTBZ-NAKE3-6ID35-YAPBX-GZTSK-G7FGD"
-      var script = document.createElement('script');
-      script.setAttribute('src', url);
-      script.async = true
-      document.getElementsByTagName('head')[0].appendChild(script);
-    }, (error) => {
-      console.log('保存失败')
-    });
+    function saveVisitorInfo() {
+      var Visitor = AV.Object.extend('blog_visitor_log');
+      var vis = new Visitor();
+      vis.set('title', title);
+      vis.set('key', key);
+      var objectId = ''
+      vis.save().then((todo) => {
+        objectId  = todo.id;
+        // 通过jsonp获取位置信息
+        const url = "https://apis.map.qq.com/ws/location/v1/ip?output=jsonp&callback=handler&key=2HTBZ-NAKE3-6ID35-YAPBX-GZTSK-G7FGD"
+        var script = document.createElement('script');
+        script.setAttribute('src', url);
+        script.async = true
+        document.getElementsByTagName('head')[0].appendChild(script);
+      }, (error) => {
+        console.log('保存失败')
+      });
+    }
 
   </script>
   <!-- ----------------- -->
