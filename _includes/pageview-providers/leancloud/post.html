@@ -72,7 +72,7 @@
       let addr = nation + ' ' + province + ' ' + city
       // 将浏览信息写入leancloud
       let vis = AV.Object.createWithoutData('blog_visitor_log', lcObjectId);
-      vis.set('apsbIsp', isp);
+      vis.set('ipsbIsp', isp);
       vis.set('ipsbIp', ip);
       vis.set('ipsbLat', lat);
       vis.set('ipsbLng', lng);
