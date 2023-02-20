@@ -66,8 +66,14 @@
       let lat = data['latitude']
       let lng = data['longitude']
       let nation = data['country']
-      let province = data['region']
-      let city = data['city']
+      var province = ''
+      if (data['region']) {
+        province = data['region']
+      }
+      var city = ''
+      if (data['city']) {
+        city = data['city']
+      }
       // 国家 省 市
       let addr = nation + ' ' + province + ' ' + city
       // 将浏览信息写入leancloud
