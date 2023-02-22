@@ -1,6 +1,6 @@
 ---
 title: pod search 报错 libjingle_peerconnection
-tags: CocoaPods Mac
+tags: CocoaPods
 key: 2023-02-22-podsearch报错
 ---
 > 关键词：Xcode, Git, 代码回滚
