@@ -417,7 +417,7 @@ key: 2022-10-12-html_table
 	<tr>
 		<!-- 横向跨度为2个单元格 -->
 		<td colspan="2" style="background-color: #FFA500;">
-			<h1>这是一个标题</h1>
+			<h2>这是一个标题</h2>
 		</td>
 	</tr>
 	<tr>
@@ -443,7 +443,7 @@ key: 2022-10-12-html_table
 	<tr>
 		<!-- 横向跨度为2个单元格 -->
 		<td colspan="2" style="background-color: #FFA500;">
-			<h1>这是一个标题</h1>
+			<h2>这是一个标题</h2>
 		</td>
 	</tr>
 	<tr>
