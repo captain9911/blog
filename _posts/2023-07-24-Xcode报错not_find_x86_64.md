@@ -1,5 +1,5 @@
 ---
-title: Xcode14报错'x86_64-apple-ios-simulator'
+title: Xcode14报错x86_64-apple-ios-simulator
 tags: Xcode
 key: 2023-07-24-Xcode报错not_find_x86_64
 ---
