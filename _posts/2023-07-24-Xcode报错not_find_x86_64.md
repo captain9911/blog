@@ -3,7 +3,7 @@ title: Xcode14报错'x86_64-apple-ios-simulator'
 tags: Xcode
 key: 2023-07-24-Xcode报错not_find_x86_64
 ---
-> 关键词：CodeSnippet, 代码片段, xcode
+> 关键词：Xcode14, arm64, simulator
 
 ## 报错信息
 
