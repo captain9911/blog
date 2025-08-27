@@ -42,3 +42,4 @@ key: 2024-03-10-配置roatingapp
 在`info.plist`文件中找到这一行并删除：
 
 <img src="https://image.oldboard.tech/blog/20231218095622.png"/>
+
