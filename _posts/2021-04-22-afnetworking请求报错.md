@@ -20,4 +20,4 @@ Error Domain=NSURLErrorDomain Code=-1202 "此服务器的证书无效。您可�
 
 ### 解决方法
 
-这里使用了一个客户端直接忽略SSL证书验证的方法。<a href="https://www.oldboard.tech/2021/04/22/afnetworking%E5%BF%BD%E7%95%A5ssl%E8%AF%81%E4%B9%A6%E9%AA%8C%E8%AF%81.html">点击查看</a>
+这里使用了一个客户端直接忽略SSL证书验证的方法。<a href="https://blog.oldboard.tech/2021/04/22/afnetworking%E5%BF%BD%E7%95%A5ssl%E8%AF%81%E4%B9%A6%E9%AA%8C%E8%AF%81.html">点击查看</a>
